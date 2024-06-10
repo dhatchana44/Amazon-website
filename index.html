@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amazon Clone</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-orange-100">
+        <!-------------------Header-section------------------------------>
+        <header>
+            <div
+                class="nav-bar flex justify-evenly content-center bg-black min-[400px]:h-15  md:h-[50px] lg:h-[70px] xl:h-20 2xl:h-16 cursor-pointer">
+                <div class="nav-log md:mt-1  lg:mt-1 xl:mt-0 2xl:-mt-2">
+                    <img
+                        class="min-[400px]:w-14 md:w-20 lg:w-32 lg:h-20 xl:w-40 xl:h-24 2xl:w-38 "
+                        src="amazon-logo-1024x683-removebg-preview.png">
+                </div>
+                <div class="nav-address mt-2 md:mt-3 lg:mt-4 2xl:mt-2 hover:border-solid hover:border-2 border-white">
+                    <p
+                        class="text-white min-[400px]:text-[6px] ml-3 md:text-[12px] md:ml-4 lg:text-[15px] xl:text-[20px] xl:ml-5 2xl:text-[18px] 2xl:ml-6">Delivering
+                        to chennai</p>
+                    <div class="add-icon flex content-center">
+                        <svg
+                            class="min-[400px]:w-3 text-white md:w-4 lg:w-5 xl:w-6"
+                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        <p
+                            class="text-white min-[400px]:text-[6px] font-bold md:text-[10px] lg:text-[15px] xl:text-[18px] 2xl:text-[16px]">Updata
+                            Location</p>
+                    </div>
+                </div>
+                <div
+                    class="nav-search mt-1.5 md:mt-3 flex justify-evenly min-[400px]:bg-white rounded-md h-6 md:bg-white md:rounded-md md:h-8 lg:h-10 lg:mt-4 xl:mt-5 2xl:h-8">
+                    <select
+                        class="search-select min-[400px]:border-none bg-slate-200 text-[10px] min-[200px]:w-10 w-8 h-6 content-center rounded-l-md border-none md:text-[15px] md:w-10 md:h-8 lg:w-16 lg:h-10 lg:text-[25px] 2xl:h-8 2xl:text-[20px] 2xl:w-12">
+                        <option value>All</option>
+                    </select>
+                    <input
+                        class="border-none outline-none min-[400px]:text-[10px] w-20 h-6 md:w-48 md:h-8 md:text-[15px] lg:w-72 xl:w-[430px] lg:text-[18px] xl:text-[20px] 2xl:text-[18px] 2xl:w-[450px]"
+                        type="text" placeholder="Search Amazon">
+                    <div class="search-icon">
+                        <svg
+                            class="min-[400px]:w-6 text-black  bg-amber-300 rounded-r-md md:w-8  lg:w-10 xl:w-10 2xl:w-8"
+                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="nav-singin mt-1.5 md:mt-3 lg:mt-4.5 xl:mt-3 2xl:mt-3 hover:border-solid hover:border-2 border-white">
+                    <p
+                        class="min-[400px]:text-white text-[8px] md:text-[12px] lg:text-[18px]  xl:text-[22px] 2xl:text-[16px]"><span>Hello,
+                            sign in</span></p>
+                    <p
+                        class="min-[400px]:text-white text-[9px] font-bold md:text-[10px] lg:text-[16px]  xl:text-[19px] 2xl:text-[15px]">Account
+                        & lists</p>
+                </div>
+                <div
+                    class="nav-return mt-1.5 md:mt-3 lg:mt-4.5 xl:mt-3 2xl:mt-3 hover:border-solid hover:border-2 border-white">
+                    <p
+                        class="min-[400px]:text-white text-[8px] md:text-[12px] lg:text-[18px] xl:text-[22px] 2xl:text-[16px]"><span>Returns</span></p>
+                    <p
+                        class="min-[400px]:text-white text-[9px] font-bold md:text-[10px] lg:text-[16px] xl:text-[19px] 2xl:text-[15px]">&
+                        Orders</p>
+                </div>
+                <div class="image mt-1.5 md:mt-3 2xl:mt-3 hover:border-solid hover:border-2 border-white">
+                    <img class="min-[400px]:w-6 md:w-8 lg:w-12 xl:w-14 2xl:w-12"
+                        src="shopping_cart-removebg-preview.png">
+                </div>
+            </div>
+        </header>
+        <!--------------------navbar---section-second--------------------------------------------->
+        <div class="bg-slate-800 min-[400px]:p-1 md:p-3 lg:p-4 xl:p-6 2xl:p-1 cursor-pointer">
+            <div
+                class="menu-one min-[400px]:flex justify-evenly content-center  text-white text-[7px] md:text-[10px] lg:text-[15px] xl:text-[20px] 2xl:text-[18px] ">
+                <div class="flex hover:border-solid hover:border-2 border-white">
+                    <svg class="w-2 md:w-3.5 lg:w-5 xl:w-8 2xl:w-6"
+                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <p>All</p>
+                </div>
+                <p class="hover:border-solid hover:border-2 border-white ">Amazon minTV</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Sell</p>
+                <p class="hover:border-solid hover:border-2 border-white ">BestSeller</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Moblies</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Today's deals</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Electonics</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Prime</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Fashion</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Home & Kitchen</p>
+                <p class="hover:border-solid hover:border-2 border-white ">Customer Service</p>
+            </div>
+        </div>
+        <!---------------------------------------product-sale-image------------------------------------------------------------------------------->
+        <div class="hero-section-images">
+            <img
+                class="absolute min-[400px]:w-full h-40 md:w-full md:h-64 lg:w-full lg:h-80 xl:w-full xl:h-96 2xl:w-full 2xl:h-[450px]"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/march/brands/GW/Under_1499_Tallhero_3000x1200._CB561212093_.jpg">
+            <div class="sliders">
+                <div class="right float-left mt-7 md:mt-12 lg:mt-20 xl:mt-24">
+                    <svg
+                        class="absolute min-[400px]:w-10 md:w-16 lg:w-20 xl:w-24"
+                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </div>
+                <div
+                    class="left float-right mr-12 mt-7 md:mt-12 md:mr-20 lg:mt-20 lg:mr-20 xl:mt-24 xl:mr-24">
+                    <svg
+                        class="absolute min-[400px]:w-10 md:w-16 lg:w-20 xl:w-24"
+                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------product-section-box-one--------------------------------------------------------->
+        <section
+            class="w-full absolute 2xl:mt-72 xl:mt-64 lg:mt-52 md:mt-36 min-[400px]:mt-20">
+            <div
+                class="card-container flex justify-evenly">
+                <div
+                    class="card-products-container flex justify-evenly content-center mt-5 ">
+                    <!---product-firs-->
+                    <div
+                        class="card-products flex flex-col justify-evenly max-w-80 h-[450px] p-3 gap-2 bg-white lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[230px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-[12px]  min-[400px]:text-[7px] min-[400px]:font-bold 2xl:mb-5 xl:mb-12 lg:mb-14 md:mb-12 min-[400px]:mb-4">Appliances
+                            for your home | Up to 55% off</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium xl:text-[16px] lg:text-[10px] md:text-[7px] min-[400px]:text-[5px] mt-2">Air
+                                    conditioners</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Microwaves
+                                </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg"
+                                    alt>
+                                <p
+                                    class="text-sm font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Refrigerators</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Washing
+                                    machines</p>
+                            </div>
+                        </div>
+                        <div class="more-option cursor-pointer min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px] lg:text-[10px] md:text-[8px] md:mt-5 min-[400px]:mt-2" ><a
+                              href>see more</a></div>
+                    </div>
+                </div>
+                <!--product-second---->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] p-3 gap-2 bg-white lg:max-w-56 lg:h-[380px] xl:max-w-72 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[230px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-[12px]  min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mt-5">Up
+                            to 60%
+                            off | Styles for men</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-34 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-14 min-[400px]:h-10"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">
+                                    Clothing</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Footwear
+                                </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Watches</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Bags
+                                    &
+                                    Wallets</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px] md:text-[8px] 2xl:mb-5 xl:mb-2 lg:mb-2"><a
+                                href>End of season
+                                sale</a></div>
+                    </div>
+                </div>
+                <!--product-three--->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-evenly max-w-80 h-[450px]  p-3 gap-2 bg-white lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-32 min-[400px]:h-[230px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-[12px] min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mt-5 xl:mb-14 lg:mb-10 md:mb-10 min-[400px]:mb-4">Revamp
+                            your home in style</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-32 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-14 min-[400px]:h-10"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_decor_1._SY116_CB584596691_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Figurines,
+                                    vases
+                                    and more</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_storage_1._SY116_CB584596691_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Home
+                                    storage</p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-52 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_lighting_2._SY116_CB584596691_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Lighting
+                                    solutions</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-32 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/186x116_Home_furnishings_2._SY116_CB584596691_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">
+                                    Cushion covers,
+                                    bedsheets & more</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px] md:text-[8px] lg:mb-2 md:mt-2 min-[400px]:mt-2"><a
+                                href>Explore all</a></div>
+                    </div>
+                </div>
+
+                <!--product-four---->
+                <div
+                    class="card-products-container flex  content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px]  p-3 gap-2 bg-white lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[230px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-[12px] min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mt-4">Up
+                            to 60%
+                            off | Styles for women</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-44 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF1-186-116._SY116_CB636048992_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Women's
+                                    Clothing</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-40 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Footwear+Handbags
+                                </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-186-116._SY116_CB636048992_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Watches</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF3-186-116._SY116_CB636048992_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Fashion
+                                    jewellery</p>
+                            </div>
+                        </div> 
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px] md:text-[8px] 2xl:mb-5 lg:mb-4 min-[400px]:mb-1" ><a
+                                href>End of season</a></div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------product-section-box-second--------------------------------------------------------->
+            <div
+                class="card-container  flex justify-evenly -mt-20 min-[400px]:-mt-24">
+                <div
+                    class="card-products-container flex justify-evenly content-center">
+                    <!---product-firs-->
+                    <div
+                        class="card-products flex flex-col justify-evenly max-w-80 h-[450px] mt-28 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-[12px] min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mb-12 xl:mb-12 lg:mb-10 md:mb-2 min-[400px]:mb-8">Min.
+                            40% off |
+                            Baby care & toys | Amazon Brands &...</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/AmazonBrands/Bikram/Bikram1/QC_186x116_1._SY116_CB595777477_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Baby
+                                    essential</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/AmazonBrands/GW_CPB_/QC_CC/Baby_toys/QC_PC_186x116_3._SY116_CB580890147_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Baby
+                                    Home</p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/AmazonBrands/GW_CPB_/QC_CC/Baby_toys/QC_PC_186x116_31._SY116_CB561295501_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Kinds</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/AmazonBrands/GW_CPB_/QC_CC/Baby_toys/QC_PC_186x116_1._SY116_CB580890518_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Penique</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px]  md:text-[8px] 2xl:mt-14 xl:mt-10 md:mt-12 min-[400px]:mt-6" ><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+                <!--product-second---->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-[12px] min-[400px]:font-bold   min-[400px]:text-[7px]">Starting
+                            ₹199
+                            | Amazon Brands & more</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://cdn.shopify.com/s/files/1/0448/6882/9352/products/maroonred-tree-design-cotton-jaipuri-bedsheet-double-bed-593.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Starting
+                                    Price RS199
+                                    | Bedsheets</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSYnly1jBHp5eX0xoLF3ELe01UurVrVWbgkg&s"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Starting
+                                    Price RS250
+                                    |</p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://www.decoraid.com/wp-content/uploads/2021/04/boho-home-decor-ideas-scaled.jpeg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Starting
+                                    Price RS200
+                                    | Home decor</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://m.media-amazon.com/images/I/91rU3BiypGL._AC_UF350,350_QL80_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Starting
+                                    Price RS210
+                                    | Ironing broad & more</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px] md:text-[8px] lg:mb-3"><a
+                                href></a>See More</div>
+                    </div>
+                </div>
+                <!--product-three--->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-[12px] min-[400px]:font-bold   min-[400px]:text-[7px]">Up
+                            to 60% off
+                            | Professional tools, testing & more</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 md:w-16 md:h-10"
+                                    src="https://m.media-amazon.com/images/I/71fjUh2t-1L.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[6px]  mt-2">Professional
+                                    tools</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsCEstwvGJ6M8Eg9qfj47p_RqLIaSp_eG3vg&s"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Measuring
+                                    meter</p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo_4GP75nkotk8aX7wG3QsnH21lKNwLKJ9pQ&s"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Cleaning
+                                    supplies</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://medicalcallservice.com/wp-content/uploads/2019/11/Doctor-Office-Supplies.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Medical
+                                    supplies</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px] md:text-[8px] lg:mb-3"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+
+                <!--product-four---->
+                <div
+                    class="card-products-container flex  content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:text-slate-700 xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-[12px] min-[400px]:font-bold  min-[400px]:text-[7px]">Starting
+                            ₹159
+                            | Baby essentials | Amazon brands & more</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ufLISIAPw8agA6lrH3PBDaY-4Hj3NpsZug&s"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Strating
+                                    Rs140 | Baby
+                                    diapers</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://m.media-amazon.com/images/I/81-qLxwQswL._AC_UY1100_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Strating
+                                    Rs230 | Baby
+                                    Clothing </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://rforrabbit.com/cdn/shop/files/BubbleDoubleAquaBathtubBlue_1_533x.jpg?v=1704183758"
+                                    alt>
+                                <p
+                                    class="text-sm font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[2px]  mt-2">Strating
+                                    Rs200 |Baby cardles and bath
+                                    </p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-6"
+                                    src="https://babymoo.in/cdn/shop/files/668-31-GREEN_1.jpg?v=1705472308"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Strating
+                                    Rs250 | Baby
+                                    play gym</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[6px] 2xl:text-[15px] text-cyan-500 xl:text-[12px]  lg:text-[10px] md:text-[8px] lg:mb-3 "><a
+                                href>See more</a></div>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------bikes-Electric scooters--sliders-one--------------------------------------------------------------------------->
+            <div
+                class="product-bikes bg-white xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+                <div
+                    class="today-deal flex justify-center content-center absolute">
+                    <h3
+                        class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl  md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[10px]">Electric
+                        scooters & motorbikes</h3>
+                    <a href
+                        class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-1.5 xl:text-base lg:text-base lg:mt-1.5 md:text-xs md:mt-1 min-[400px]:text-[10px]">See
+                        more offers</a>
+                </div>
+                <div class="img-iteams flex p-10 2xl:mt-5 xl:mt-8 lg:mt-5 md:mt-2">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="1_rx_100_5855d3b4b4-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="2.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-32  min-[400px]:w-20 min-[400px]:h-28"
+                        src="7fe5043348ef5be2f79666c8319e068c-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="Ather-Electric-Vehicle-Flipkart-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="bmw-g-310-r-white-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="bmw-motorcycles.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="HD-wallpaper-mt-15-motorcycle-motor-sport-bike-thumbnail-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="Hero-Duet-Front-threequarter-107787.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="Jawa-Standard-Front-threequarter-141784.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="knight-black-tvs-apache-rtr-160-4v-image-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="perak-right-side-view-2.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="png-clipart-ktm-bajaj-auto-motorcycle-bajaj-pulsar-bajaj-ct-100-ktm-bike-exhaust-system-bicycle-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="png-transparent-scooter-car-tvs-scooty-tvs-motor-company-motorcycle-parking-brake-scooter-car-color-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="royal-enfield-meteor-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="royalenfield-classic-signals.webp">
+                </div>
+            </div>
+            <!----------------------products-mens---womens-----slider-two----------------------------------->
+            <div
+                class="product-mens-womens bg-white  xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+                <div
+                    class="today-deal flex justify-center content-center absolute">
+                    <h3
+                        class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[10px]">Best
+                        Sellers in Clothing Mens & Womens & Accessories</h3>
+                    <a href
+                        class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-2 xl:text-base lg:text-base lg:mt-1.5   md:text-xs md:mt-1 min-[400px]:text-[10px]">See
+                        more offers</a>
+                </div>
+                <div class="img-iteams flex p-10 2xl:mt-10 xl:mt-12 lg:mt-7">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="12c-combo-2-1663-1667-world-wear-footwear-original-imag5edftfvq4pxz.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="61MHB3Npn4L._AC_UY1100_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="64f9190df312a71b0d1c098e-men-s-stretch-skinny-ripped-jeans-super.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="71fYuIlNaYL._AC_UY1100_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="71WCBA-yHvL._AC_UY1100_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/71Mz-4CXi8L._AC_UY1100_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="HD-wallpaper-kajal-heroine-in-white-saree-kajal-heroine-white-saree-smile-thumbnail-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/41ggqCgetVL._AC_UY1100_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="81wy4PsxSCL._AC_UY1100_-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="516r5YxqCdL._AC_UY1100_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="659e41a8a8b9551c71508a99-men-s-short-sleeve-knit-button-down-removebg-preview.png">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="718K3P8vdNL.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="party-wear-full-sleeve-printed-ladies-top-with-cotton-materials-normal-wash-813.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="soft-smooth-texture-fashionable-daily-wear-plain-fancy-ladies-tops-810.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="stylish-look-gorgeous-beautiful-luxurious-fabrics-simple-elegant-light-pink-ladies-fancy-tops--055.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="mens-cotton-check-shirt.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52  lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="men-inner-vest.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="fuschia.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48   md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="850_4227-01 - Copy.webp">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48   md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="611LTT6zXNL._AC_UY1000_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-48 lg:h-64  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/51pX3Up4icL._AC_UY1100_.jpg">
+                </div>
+            </div>
+            <!------------------------------------------product-section--video---------------------------------------------------------------------------------------->
+            <div
+                class="card-container flex flex-col -mt-20 min-[400px]:-mt-24">
+                <div class="flex justify-evenly">
+                <div
+                    class="card-products-container flex justify-evenly content-center">
+                    <!---product-firs-->
+                    <div
+                        class="card-products flex flex-col justify-evenly max-w-80 h-[450px] mt-28 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mb-5">Minimum 50%
+                            off | Top styles for her</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://rukminim2.flixcart.com/image/850/1000/xif0q/kids-t-shirt/t/r/y/4-5-years-na-kd-708-because-navy-26-atlans-clothes-original-imagz7bgarubcsya.jpeg?q=90&crop=true"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Printed T-Shirts</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://cdn12.nnnow.com/web-images/large/styles/6PBTEYT31A7/1705999554761/1.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">U.S Polo kinds
+                                    dress</p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://assets.ajio.com/medias/sys_master/root/20230717/C4y1/64b55100eebac147fc728c73/-473Wx593H-469457995-black-MODEL.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Pumma Girls Dress</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://cdn11.nnnow.com/web-images/medium/styles/T69SKGUSUEG/1682682596069/1.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">U.S Polo Shirt</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 2xl:mt-5 cursor-pointer xl:text-base xl:mt-12 lg:text-base lg:mt-5 md:text-xs md:mt-14 min-[400px]:mt-9"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+                <!--product-second---->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px]">Never before
+                            offers from Small businesses</h2>
+                        <div class="products-list ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-96 2xl:h-72 2xl:mb-10 xl:w-80 xl:h-64 xl:mb-16 lg:w-72 lg:h-60 lg:mb-8  md:w-60 md:h-40 md:mb-5 min-[400px]:w-28 min-[400px]:h-40 min-[400px]:mb-5"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/Desktop_CC_April_379x304._SY304_CB561877599_.jpg"
+                                    alt>
+                            </div>
+                            <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 cursor-pointer xl:text-base lg:text-base md:text-xs"><a
+                                href></a>See more</div>
+                        </div>
+                    </div>
+                </div>
+                <!--product-three--->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px]">Starting ₹99 |
+                            Start your fitness journey</h2>
+                        <div class="products-list ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-96 2xl:h-72 2xl:mb-10 xl:w-80 xl:h-64 xl:mb-16 lg:w-72 lg:h-60 lg:mb-8 md:w-60 md:h-40 md:mb-5 min-[400px]:w-28 min-[400px]:h-40 min-[400px]:mb-5"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Sports/GW_Desktop/1199101_379x304_Compressed._SY304_CB448278349_.jpg"
+                                    alt>
+                            </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 cursor-pointer xl:text-base lg:text-base md:text-xs"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+
+                <!--product-four---->
+                <div
+                    class="card-products-container flex justify-evenly  content-center ml-12 md:ml-4 min-[400px]:ml-0.5">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:text-slate-700 xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold  min-[400px]:text-[7px]">Shoes,
+                            jewellery & more | Up to 60% off</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/15th/QC_Safari-PCLow._SY116_CB560638684_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Bags</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/15th/QC_Jewl-PCLow._SY116_CB560638684_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Fashion
+                                    jewellery</p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/15th/QC_Watch-PC2low._SY116_CB560638685_.jpg"
+                                    alt>
+                                <p
+                                    class="text-sm font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[2px]  mt-2">Watches</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/15th/QC_Sports-PC2low._SY116_CB560638684_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Shoes</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 xl:text-base lg:text-base md:text-xs"><a
+                                href>See more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------bikes-Electric scooters--sliders-three--------------------------------------------------------------------------->
+            <div
+                class="product-bikes bg-white xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+                <div
+                    class="today-deal flex justify-center content-center absolute">
+                    <h3
+                        class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl  md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[10px]">Up to 70%
+                        off | Bestsellers curated from artians</h3>
+                    <a href
+                        class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-1.5 xl:text-base lg:text-base lg:mt-1.5 md:text-xs md:mt-1 min-[400px]:text-[10px]">See
+                        more offers</a>
+                </div>
+                <div class="img-iteams flex p-10 2xl:mt-5 xl:mt-8 lg:mt-5 md:mt-2">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://www.at-home.co.in/cdn/shop/products/HPF18ICSTBAG05915_2.jpg?v=1681196606">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://woodsala.com/cdn/shop/files/14_4.jpg?v=1704284164">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-32  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/31KvT-AusQL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://5.imimg.com/data5/SELLER/Default/2023/12/370185817/UO/QK/TC/162972883/2-500x500.jpeg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/81TGQPiJxvL._AC_UF894,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61XgYRrZGIL._AC_UF894,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/71MAxZDSGqL._AC_UL400_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/71-3t+H-c9L._AC_UF894,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/91-JgqE8p8L._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/91I348TpA+L.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/716NT082FrL.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61F-pSHedUL._AC_UF894,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/615ekqfR6uL._AC_UF894,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/813CkQSo2VL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://cdn.vibecity.in/providers/615554cce174580012e2ada1/9496857e-d96b-496d-9981-7ce261a1dbd5_d0f44bc9-45f2-4d2d-9006-9897f1ba0bb3-3X.png">
+                </div>
+            </div>
+            <!----------------------products-mens---womens-----slider-four----------------------------------->
+            <div
+                class="product-mens-womens bg-white  xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+                <div
+                    class="today-deal flex justify-center content-center absolute">
+                    <h3
+                        class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[8.5px]">Up to 60%
+                        off | Personal care products from women-owned brands</h3>
+                    <a href
+                        class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-2 xl:text-base lg:text-base lg:mt-1.5   md:text-xs md:mt-1 min-[400px]:text-[8px]">See
+                        more offers</a>
+                </div>
+                <div class="img-iteams flex p-10 2xl:mt-10 xl:mt-12 lg:mt-7">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61Dz5LmTo4L._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61eG1QWSe7L._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/6105h+WJVsL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61ShCdgYfJL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61ML+AXMSNL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61pQ3oK5MJL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/41ER-AAlovL.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/51yfZRF2seL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61mcxlFs43L._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/71FVijwn3+L._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61oVoSaJyeL._AC_UF1000,1000_QL80_.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61v6HPS4ZCL.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/61NWzDhR16L.jpg">
+                    <img
+                        class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                        src="https://m.media-amazon.com/images/I/71OpFx6W0nL._AC_UF1000,1000_QL80_.jpg">
+                </div>
+            </div>
+           
+          <!------------------------------------------product-section--video---------------------------------------------------------------------------------------->
+          <div
+                class="card-container flex flex-col -mt-20 min-[400px]:-mt-24">
+                <div class="flex justify-evenly">
+                <div
+                    class="card-products-container flex justify-evenly content-center">
+                    <!---product-firs-->
+                    <div
+                        class="card-products flex flex-col justify-evenly max-w-80 h-[450px] mt-28 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mb-5">Bestsellers in
+                            Women's Indian Clothing</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/I/71BLkd39VKL._AC_UL330_SR330,330_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2"></p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/I/61nCJ7mqXFL._AC_UL330_SR330,330_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2"></p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/I/611FYDb95iL._AC_UL330_SR330,330_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2"></p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images-eu.ssl-images-amazon.com/images/I/61SgADmAyDL._AC_UL330_SR330,330_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2"></p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 2xl:mt-5 cursor-pointer xl:text-base xl:mt-12 lg:text-base lg:mt-5 md:text-xs md:mt-14 min-[400px]:mt-9"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+                <!--product-second---->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px]">Minimum 50% off | Indoor plants</h2>
+                        <div class="products-list ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-96 2xl:h-72 2xl:mb-10 xl:w-80 xl:h-64 xl:mb-16 lg:w-72 lg:h-60 lg:mb-8  md:w-60 md:h-40 md:mb-5 min-[400px]:w-28 min-[400px]:h-40 min-[400px]:mb-5"
+                                    src="https://housing.com/news/wp-content/uploads/2022/11/10-best-living-room-indoor-plants-15.jpg"
+                                    alt="">
+                            </div>
+                            <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 cursor-pointer xl:text-base lg:text-base md:text-xs"><a
+                                href></a>See more</div>
+                        </div>
+                    </div>
+                </div>
+                <!--product-three--->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px]">Up to 50% off |
+                            International brands</h2>
+                        <div class="products-list ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-96 2xl:h-72 2xl:mb-10 xl:w-80 xl:h-64 xl:mb-16 lg:w-72 lg:h-60 lg:mb-8 md:w-60 md:h-40 md:mb-5 min-[400px]:w-28 min-[400px]:h-40 min-[400px]:mb-5"
+                                    src="https://www.kent.co.in/images/kitchen-appliances/grinder-blender/kent-rapidmix-banner-mobile.png"
+                                    alt>
+                            </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 cursor-pointer xl:text-base lg:text-base md:text-xs"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+
+                <!--product-four---->
+                <div
+                    class="card-products-container flex justify-evenly  content-center ml-12 md:ml-4 min-[400px]:ml-0.5">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:text-slate-700 xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold  min-[400px]:text-[7px]">Under ₹499
+                            | Pocket-friendly fashion</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://img.freepik.com/free-photo/fast-fashion-concept-with-piles-clothes_23-2150871198.jpg?size=626&ext=jpg&ga=GA1.1.867424154.1712188800&semt=ais"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Clothing</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://images.glowroad.com/faceview/d5g/cc/i1h/cc/imgs/283bcade-fc66-4d28-bf2b-d50de6e7cf03_22872236-xlgn400x400.jpg?productId=P-13709999"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Backpacks
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://t4.ftcdn.net/jpg/03/83/72/35/360_F_383723590_htmZf74auhyhPFvQUGQecrt4ZA7VzuYW.jpg"
+                                    alt>
+                                <p
+                                    class="text-sm font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[2px]  mt-2">Footwear</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://lablerahulsingh.com/wp-content/uploads/2023/06/83.jpeg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">View all</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 xl:text-base lg:text-base md:text-xs"><a
+                                href>See more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <!--------------------------furniture & more from stores----sliders-five--------------------------------------------------------------------------->
+           <div
+           class="product-bikes bg-white xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+           <div
+               class="today-deal flex justify-center content-center absolute">
+               <h3
+                   class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl  md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[8.5px]">Minimum 40%
+                   off | Sofa sets, outdoor furniture & more from stores</h3>
+               <a href
+                   class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-1.5 xl:text-base lg:text-base lg:mt-1.5 md:text-xs md:mt-1 min-[400px]:text-[8px]">See
+                   more offers</a>
+           </div>
+           <div class="img-iteams flex p-10 2xl:mt-5 xl:mt-8 lg:mt-5 md:mt-2">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/41+v-AEFWOL._AC_UL400_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSATDJL6m3-gt-Z9tLXba3bSx85MM25ghkUAQ&s">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-32  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/51Abzpxm1HL._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/712E2Ro3tRL.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/71Ca8hsWW1L._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://images.meesho.com/images/products/225245337/fvaei_512.webp">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/61dbOM0RWwL.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ08E-O6mrD3W3UPJojhCyGF3yMiIBZMeLgJQ&s">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/711DxvZTb7L._AC_UF350,350_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://5.imimg.com/data5/SELLER/Default/2023/9/341786867/SR/HW/YS/39221816/wooden-outdoor-furniture-500x500.jpeg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://tiimg.tistatic.com/fp/1/006/597/specifically-designed-outdoor-furniture-for-balcony-132.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/71EDWPSxrzL.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48 md:w-28 md:h-36  min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://5.imimg.com/data5/CU/QI/AO/SELLER-10553590/balcony-furniture-set.jpg">
+           </div>
+       </div>
+       <!---------------------- Home & Kitchen-----slider-six---------------------------------->
+       <div
+           class="product-mens-womens bg-white  xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+           <div
+               class="today-deal flex justify-center content-center absolute">
+               <h3
+                   class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[10px]">Best
+                   Sellers in Home & Kitchen</h3>
+               <a href
+                   class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-2 xl:text-base lg:text-base lg:mt-1.5   md:text-xs md:mt-1 min-[400px]:text-[10px]">See
+                   more offers</a>
+           </div>
+           <div class="img-iteams flex p-10 2xl:mt-10 xl:mt-12 lg:mt-7">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/518qYT-OjaL.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/51RXzjrUmkL._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/61sRf7oDELL._AC_UF1000,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/51-NKrTs99L.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/51hPdriNQWL.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/71mC1vec5+L._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://rukminim2.flixcart.com/image/850/1000/xif0q/hook/j/0/u/10-10-photo-frame-hooks-for-wall-without-drilling-10-pack-self-original-imagwzhrwcbydnys.jpeg?q=90&crop=false">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV7_-vQhFDUy0uWLeEheY8jWfwTakPc8hhIw&s">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/514V48z8dIL._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://www.jiomart.com/images/product/original/rvxpuaj7ff/shalimar-premium-oxo-biodegradable-garbage-bags-19-x-21-inches-medium-120-bags-4-rolls-dustbin-bag-trash-bag-black-color-product-images-orvxpuaj7ff-p591879992-0-202206030745.jpg?im=Resize=(420,420)">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/816lZp-8R2L._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/51GYSj8o64L._AC_UF894,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/61NtrYnqV9L._AC_UF1000,1000_QL80_.jpg">
+               <img
+                   class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                   src="https://m.media-amazon.com/images/I/61djKQOM5CL._AC_UF1000,1000_QL80_.jpg">
+           </div>
+       </div>
+            <!------------------------------------------product-video-section-------------------------------------------------------------------------->
+            <div
+                class="card-container flex flex-col -mt-20 min-[400px]:-mt-24">
+                <div class="flex justify-evenly">
+                <div
+                    class="card-products-container flex justify-evenly content-center">
+                    <!---product-firs-->
+                    <div
+                        class="card-products flex flex-col justify-evenly max-w-80 h-[450px] mt-28 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl lg:text-slate-700 xl:font-bold lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px] 2xl:mb-5">Up to ₹5000
+                            off | Travel tickets</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://img.freepik.com/free-photo/planes-wing-cuts-through-sky-cotton-candy-clouds-during-radiant-sunset_91128-4456.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Upto rs5000 of |
+                                    Flight tickets</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://media.istockphoto.com/id/466506979/photo/indian-passenger-train.jpg?s=612x612&w=0&k=20&c=AKcMyvqsam93AnADQaK4hzAMI9bdWOVd8tKoF5Sf10M="
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Trains payment gateway
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://www.volvobuses.com/content/dam/volvo-buses/markets/india/news/2021/BS%20VI%20Bus%20Single%20Axcel_Single%20Bus.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Bus tickets
+                                    booking</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://m.media-amazon.com/images/I/71gEUGyReJL._AC_UY1100_.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[8px]  mt-2">Products for your
+                                    travel needs</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 2xl:mt-5 cursor-pointer xl:text-base xl:mt-12 lg:text-base lg:mt-5 md:text-xs md:mt-14 min-[400px]:mt-3"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+                <!--product-second---->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24 p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px]">Starting ₹99 |
+                            Start your fitness journey</h2>
+                        <div class="products-list ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-96 2xl:h-72 2xl:mb-10 xl:w-80 xl:h-64 xl:mb-16 lg:w-72 lg:h-60 lg:mb-8  md:w-60 md:h-40 md:mb-5 min-[400px]:w-28 min-[400px]:h-40 min-[400px]:mb-5"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJh-pEUKoVC8PAlz7jtx7CjrSRQDrr1BPfEA&s"
+                                    alt>
+                            </div>
+                            <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 cursor-pointer xl:text-base lg:text-base md:text-xs"><a
+                                href></a>See more</div>
+                        </div>
+                    </div>
+                </div>
+                <!--product-three--->
+                <div class="card-products-container flex content-center mt-5 ">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-28 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold   min-[400px]:text-[7px]">Only at ₹150 |
+                            Organic honey 20 sachets</h2>
+                        <div class="products-list ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-96 2xl:h-72 2xl:mb-10 xl:w-80 xl:h-64 xl:mb-16 lg:w-72 lg:h-60 lg:mb-8 md:w-60 md:h-40 md:mb-5 min-[400px]:w-28 min-[400px]:h-40 min-[400px]:mb-5"
+                                    src="https://m.media-amazon.com/images/I/71lo4hK3skL._AC_UF1000,1000_QL80_.jpg"
+                                    alt>
+                            </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 cursor-pointer xl:text-base lg:text-base md:text-xs"><a
+                                href></a>See more</div>
+                    </div>
+                </div>
+
+                <!--product-four---->
+                <div
+                    class="card-products-container flex justify-evenly  content-center ml-12 md:ml-4 min-[400px]:ml-0.5">
+                    <div
+                        class="card-products flex flex-col justify-between max-w-80 h-[450px] mt-24  p-3 gap-2 bg-white  lg:max-w-56 lg:h-[380px] xl:max-w-80 xl:h-[450px] md:max-w-40 md:h-[300px] min-[400px]:max-w-24 min-[400px]:h-[250px]">
+                        <h2
+                            class="2xl:text-xl 2xl:font-bold text-slate-700 xl:text-xl xl:text-slate-700 xl:font-bold lg:text-slate-700 lg:text-base lg:font-bold md:font-bold md:text-sm min-[400px]:font-bold  min-[400px]:text-[7px]">Amazon
+                            Fresh | Great prices | Fruits & vegetables</h2>
+                        <div class="products-list flex gap-4 ">
+                            <div class="product-type">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639_1280.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Fruits</p>
+                            </div>
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://cdn.britannica.com/17/196817-159-9E487F15/vegetables.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Vegetables
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="products-list flex gap-4">
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://vaya.in/wp-content/uploads/2021/04/10-Seasonal-Fruits-and-Vegetables-You-Can-Include-in-Your-Diet.jpg"
+                                    alt>
+                                <p
+                                    class="text-sm font-medium  xl:text-[16px] lg:text-[10px]  md:text-[7px] min-[400px]:text-[2px]  mt-2">Season's
+                                    Specail</p>
+                            </div>
+
+                            <div class="product-types">
+                                <img
+                                    class="2xl:w-36 2xl:h-20 xl:w-36 xl:h-20 lg:w-24 lg:h-16 md:w-16 md:h-10 min-[400px]:w-10 min-[400px]:h-8"
+                                    src="https://img.freepik.com/premium-photo/heap-fresh-exotic-fruits_88281-17.jpg"
+                                    alt>
+                                <p
+                                    class="2xl:text-sm 2xl:font-medium  xl:text-[16px]  md:text-[7px] min-[400px]:text-[5px]  mt-2">Premium &
+                                    exotic</p>
+                            </div>
+                        </div>
+                        <div class="more-option min-[400px]:text-[10px] 2xl:text-base text-cyan-500 xl:text-base lg:text-base md:text-xs"><a
+                                href>See more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-----------------------------------Car & bike accessories---------seven-sliders------------------------------------------------------------------->
+            <div
+            class="product-mens-womens bg-white  xl:ml-9 mt-5 2xl:w-[1430px] 2xl:h-[350px] 2xl:ml-12 xl:w-[1370px] xl:h-[350px] lg:ml-6 lg:w-[980px] lg:h-[300px] md:w-[720px] md:h-[400xp] md:ml-6 md:p-2 min-[400px]:w-[420px] min-[400px]:h-[200px] min-[400px]:ml-1 p-5 overflow-y-hidden overflow-x-scroll">
+            <div
+                class="today-deal flex justify-center content-center absolute">
+                <h3
+                    class="text-black font-serif font-bold 2xl:text-2xl xl:text-2xl lg:text-xl md:text-sm md:ml-4 md:mt-1 min-[400px]:text-[10px]">Up to 60%
+                    off | Car & bike accessories & more</h3>
+                <a href
+                    class="ml-5 font-sans text-cyan-500 2xl:text-base 2xl:mt-2 xl:text-base lg:text-base lg:mt-1.5   md:text-xs md:mt-1 min-[400px]:text-[10px]">See
+                    more offers</a>
+            </div>
+            <div class="img-iteams flex p-10 2xl:mt-10 xl:mt-12 lg:mt-7">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/71fRFM4eMYS._AC_UF1000,1000_QL80_.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/818kmzObgCL._AC_UF1000,1000_QL80_.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/717wYrO+b0L._AC_UF1000,1000_QL80_.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/61eEetcCb9L._AC_UF1000,1000_QL80_.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/819Gt9Act8L._AC_UF894,1000_QL80_.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/71RVlMswpgL._AC_UF1000,1000_QL80_.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://www.bigbasket.com/media/uploads/p/xxl/100567465_7-godrej-aer-twist-gel-car-air-freshener-fresh-lush-green.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/61ge72aiPiL.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="https://m.media-amazon.com/images/I/71WvPEC0HQL.jpg">
+                <img
+                    class="2xl:w-44 2xl:h-56 xl:w-40 xl:h-52 lg:w-36 lg:h-48  md:w-28 md:h-36 min-[400px]:w-20 min-[400px]:h-28"
+                    src="">
+            </div>
+        </div>
+            <!----------------------------------------------product-sectiion-images-rateing------------------------------------------------------------->
+            <div class="bg-white w-full mt-7 lg:h-[850px] md:h-[800px] 2xl:h-[1100px] min-[400px]:h-[700px] ">
+                <div class="border border-spacing-x-0 border-gray-500 mt-10"></div>
+                <div class="p-10">
+                    <div class="flex justify-between">
+                    <h3 class="2xl:font-serif 2xl:text-xl 2xl:font-bold xl:font-bold xl:text-2xl lg:text-xl lg:font-bold md:text-lg md:font-bold min-[400px]:text-sm min-[400px]:font-bold">Inspired by your browsing history</h3>
+                    <h4 class=" 2xl:text-xl xl:font-bold xl:text-lg lg:text-xl md:font-bold min-[400px]:text-sm min-[400px]:font-bold">Page 1 of 7</h4>
+                    </div>
+                    <div class="product-section-rate flex justify-evenly  p-10 overflow-y-visible overflow-x-scroll">
+                        <div class="product-image border border-white 2xl:w-56 2xl:h-[500px] xl:w-48 xl:h:[400px] lg:w-36 lg:h:[370px] md:w-40 md:h-[350px] min-[400px]:w-32 min-[400px]:h-[300px]  ">
+                            <img class="2xl:w-56 2xl:h-44 xl:w-52 xl:h-40 lg:w-48 lg:h-36 md:w-36 md:h-28" src="https://m.media-amazon.com/images/I/61v6HPS4ZCL.jpg">
+                            <p class="2xl:text-base text-sky-900 2xl:font-medium font-sans xl:text-lg lg:text-lg md:text-sm min-[400px]:text-xs">Earthy Sapo Handmade Reetha Shampoo Bar, for dry hair (reetha & coconut milk), 100g, Pack of 1</p>
+                            <div class="flex mt-3">
+                                <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm "
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-regular fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i> 
+                            </div> 
+                            <p class="mt-3 2xl:text-sm lg:text-xs md:text-xs min-[400px]:text-[10px]"> 3,368 ratings | Search this page 1K+ bought in past month</p>
+                            <p class="lg:text-xs md:text-xs min-[400px]:text-[10px]">M.R.P: ₹275.00
+                                Get it by Monday, June 10
+                                FREE Delivery over ₹499. Fulfilled by Amazon.</p>   
+                        </div>
+                        <div class="product-image border border-white 2xl:w-56 2xl:h-[500px] xl:w-48 xl:h:[400px] lg:w-36 lg:h:[370px]  md:w-40 md:h-[350px] min-[400px]:w-32 min-[400px]:h-[300px]">
+                            <img class="2xl:w-56 2xl:h-44 xl:w-52 xl:h-40 lg:w-48 lg:h-36  md:w-36 md:h-28" src="https://m.media-amazon.com/images/I/61tJd1lbmjL.jpg">
+                            <p class="2xl:text-base text-sky-900 2xl:font-medium font-sans xl:text-lg lg:text-lg md:text-sm min-[400px]:text-xs">Earthy Sapo Handmade Honey Dew Moisturizing Bathing Soap, 100g
+                                Earthy Sapo Handmade Honey Dew Moisturizing Bathing Soap, 100g
+                                3.5 out of 5 stars 14
+                                </p>
+                            <div class="flex mt-3">
+                                <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm "
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-regular fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i> 
+                            </div>
+                            <p class="mt-3 2xl:text-sm lg:text-xs md:text-xs min-[400px]:text-[10px]">₹200.00 (₹200.00/100 g)
+                                FREE Delivery</p>
+                        </div>
+                        <div class="product-image border border-white 2xl:w-56 2xl:h-[500px] xl:w-48 xl:h:[400px] lg:w-36 lg:h:[370px]  md:w-40 md:h-[350px] min-[400px]:w-32 min-[400px]:h-[300px]">
+                            <img class="2xl:w-56 2xl:h-44 xl:w-52 xl:h-40 lg:w-48 lg:h-36  md:w-36 md:h-28 min-[400px]:w-28 min-[400px]:h-20" src="https://m.media-amazon.com/images/I/61TpECsDgWL._AC_UF1000,1000_QL80_.jpg">
+                            <p class="2xl:text-base text-sky-900 2xl:font-medium font-sans xl:text-lg lg:text-lg md:text-sm min-[400px]:text-xs">Earthy Sapo Handmade Neem Special Cleansing & Anti infective Bathing Soap, 100g, Pack of 1
+                                Earthy Sapo Handmade Neem Special Cleansing & Anti infective Bathing Soap, 100g, Pack of 1
+                                3.9 out of 5 stars 106
+                               </p>
+                            <div class="flex mt-3">
+                                <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm "
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-regular fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i> 
+                            </div>
+                            <p class="mt-3 2xl:text-sm lg:text-xs md:text-xs min-[400px]:text-[10px]"> ₹200.00 (₹200.00/100 g)
+                                FREE Delivery</p>
+                        </div>
+                        <div class="product-image border border-white 2xl:w-56 2xl:h-[500px] xl:w-48 xl:h:[400px] lg:w-36 lg:h:[370px]  md:w-40 md:h-[350px] min-[400px]:w-32 min-[400px]:h-[300px]">
+                            <img class="2xl:w-40 2xl:h-44 xl:w-32 xl:h-40 lg:w-28 lg:h-36  md:w-24 md:h-28 min-[400px]:w-20 min-[400px]:h-20" src="https://m.media-amazon.com/images/I/51e8F4OQGcL._AC_UF1000,1000_QL80_.jpg">
+                            <p class="2xl:text-base text-sky-900 2xl:font-medium font-sans xl:text-lg lg:text-lg md:text-sm min-[400px]:text-xs">Earthy Sapo Handmade Power Plus Ayurvedic Hair Oil, 100 ml (bhringraj, brahmi, rosemary), 100 ml</p>
+                            <div class="flex mt-3">
+                                <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm "
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-regular fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            </div>
+                            <p class="mt-3 2xl:text-sm lg:text-xs md:text-xs min-[400px]:text-[10px]">₹375.00 ₹375.00 per ml(₹375.00 /100 ml)</p>
+                        </div>
+                        <div class="product-image border border-white 2xl:w-56 2xl:h-[500px] xl:w-48 xl:h:[400px] lg:w-36 lg:h:[370px]  md:w-40 md:h-[350px] min-[400px]:w-32 min-[400px]:h-[300px]">
+                            <img class="2xl:w-56 2xl:h-44 xl:w-52 xl:h-40 lg:w-48 lg:h-36  md:w-36 md:h-28 min-[400px]:w-28 min-[400px]:h-20" src="https://m.media-amazon.com/images/I/61t7ODW4BbL._AC_UF894,1000_QL80_.jpg">
+                            <p class="2xl:text-base text-sky-900 2xl:font-medium font-sans xl:text-lg lg:text-lg md:text-sm min-[400px]:text-xs">WOOD ART STORE Sheesham Wood Rectangle Shape Serving Trays for Dining Table (Brown-12x8x1.5 inch)
+                                4.1 out of 5 stars</p>
+                            <div class="flex mt-3">
+                                <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm "
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-regular fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            </div>
+                            <p class="mt-3 2xl:text-sm lg:text-xs md:text-xs min-[400px]:text-[10px]"> 2,039
+                                ₹199.00
+                                Get it Jun 15 - 19
+                                ₹99.00 shipping</p>
+                        </div>
+                        <div class="product-image border border-white 2xl:w-56 2xl:h-[600px] xl:w-48 xl:h:[400px] lg:w-36 lg:h:[370px]  md:w-40 md:h-[350px] min-[400px]:w-32 min-[400px]:h-[300px]">
+                            <img class="2xl:w-56 2xl:h-44 xl:w-52 xl:h-40 lg:w-48 lg:h-36  md:w-36 md:h-28 min-[400px]:w-28 min-[400px]:h-20" src="https://m.media-amazon.com/images/I/61zxFThhUUL._AC_UF1000,1000_QL80_.jpg">
+                            <p class="2xl:text-base text-sky-900 2xl:font-medium font-sans xl:text-lg lg:text-lg md:text-sm min-[400px]:text-xs">Goli Soda All Natural Probiotics Shampoo Bar For Dry Hair | Unisex | Intense Repair | Almond Oil | Peppermint | Palm Oil- Fre
+                                Goli Soda All Natural Probiotics Shampoo Bar For Dry Hair | Unisex | Intense Repair | Almond Oil | Peppermint | Palm Oil- Free - (Pack Of 1) - 90 g
+                                3.6 out of 5 stars </p>
+                            <div class="flex mt-3">
+                                <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm "
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-solid fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            <i class="fa-regular fa-star fa-sm"
+                                style="color: #FFD43B;font-size: larger;"></i>
+                            </div>
+                            <p class="mt-3 2xl:text-sm lg:text-xs md:text-xs min-[400px]:text-[10px]">1,673
+                                ₹247.00 (₹274.44/100 g)
+                                Get it by Monday, June 10
+                                FREE Delivery over ₹499. Fulfilled by Amazon.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="border border-spacing-x-0 border-gray-500 2xl:mb-30 w-full  min-[400px]:mt-11"></div>
+                <div class="text-center p-16 md:p-10 min-[400px]:p-4">
+                    <h3 class="2xl:text-sm md:text-xs min-[400px]:text-xs lg:text-lg xl:text-2xl">See personalized recommendations</h3>
+                    <button class="w-64 rounded-md bg-amber-500 p-1 text-lg mt-3 md:w-52 md:text-sm min-[400px]:text-xs min-[400px]:w-48 lg:text-lg  lg:w-72 xl:text-2xl xl:w-96 2xl:w-72 2xl:text-base">sign in</button>
+                    <h3 class="2xl:text-sm mt-3 md:text-xs min-[400px]:text-xs lg:text-lg xl:text-2xl">New customer? <a class="text-sky-900 mt-3 md:text-xs min-[400px]:text-xs lg:text-lg xl:text-2xl 2xl:text-sm"  href="">Start here.</a></h3>
+                </div>
+                <div class="border border-spacing-x-0 border-gray-500 2xl:mb-14 lg:mb-10 md:mb-5"></div>
+            </div>
+            <div class="bg-gray-700 p-5 text-center">
+                <a class="text-white cursor-pointer text-sm min-[400px]:text-xs md:text-xs">Back to top</a>
+            </div>
+            <!--------------------------------------product--names---seller-------------------------------------------------------------------------------->
+            <div class="bg-[#232F3E] w-full p-10 min-[400px]:p-6 md:p-10 xl:p-20 lg:p-14">
+                <div class="flex justify-evenly">
+                    <div class="text-white">
+                        <h3 class="2xl:font-bold xl:font-bold lg:font-bold md:font-bold min-[400px]:font-bold min-[400px]:text-[8px] md:text-xs lg:text-base xl:text-xl">Get to Know Us</h3>
+                        <div class="flex flex-col 2xl:text-sm space-y-2 2xl:font-extralight font-sans min-[400px]:text-[6px] min-[400px]:-space-y-0 md:text-[10px] lg:text-[15px] xl:text-[20px]">
+                            <a href="">About Us</a>
+                            <a href="">Careers</a>
+                            <a href="">Press Releases</a>
+                            <a href="">Amazon Science</a>
+                        </div>
+                    </div>
+                    <div class="text-white">
+                        <h3 class="2xl:font-bold xl:font-bold lg:font-bold md:font-bold min-[400px]:font-bold min-[400px]:text-[8px] md:text-xs lg:text-base xl:text-xl">Connect with Us</h3>
+                        <div class="flex flex-col 2xl:font-extralight  2xl:text-sm space-y-2 font-sans min-[400px]:text-[6px] min-[400px]:-space-y-0 md:text-[10px] lg:text-[15px] xl:text-[20px]">
+                            <a href="">Facebook</a>
+                            <a href="">Twitter</a>
+                            <a href="">Instagram</a>
+                        </div>
+                    </div>
+                    <div class="text-white">
+                        <h3 class="2xl:font-bold xl:font-bold lg:font-bold md:font-bold min-[400px]:font-bold min-[400px]:text-[8px] md:text-xs lg:text-base xl:text-xl">Make Money With US</h3> 
+                        <div class="flex flex-col  2xl:text-sm space-y-2 2xl:font-extralight font-sans min-[400px]:text-[6px] min-[400px]:-space-y-0 md:text-[10px] lg:text-[15px] xl:text-[20px]">
+                            <a class="" href="">Sell on Amazon</a>
+                            <a href="">Sell under Amazon Accelerartor</a>
+                            <a href="">Protect and Build your Brand</a>
+                            <a href="">Amazon Global Selling</a>
+                            <a href="">Become an Affiliate</a>
+                            <a href="">Fulfilment by Amazon</a>
+                            <a href="">Advertise Your Products</a>
+                            <a href="">Amazon Pay on Merchants</a>
+                        </div>
+                    </div>
+                    <div class="text-white">
+                        <h3 class="2xl:font-bold xl:font-bold lg:font-bold md:font-bold min-[400px]:font-bold min-[400px]:text-[8px] md:text-xs lg:text-base xl:text-xl">	
+                            Let Us Help You</h3>
+                            <div class="flex flex-col 2xl:font-extralight  2xl:text-sm space-y-2 font-sans min-[400px]:text-[6px] min-[400px]:-space-y-0 md:text-[10px] lg:text-[15px] xl:text-[20px]">
+                                <a href="">COVID-19 and Amazon</a>
+                                <a href="">Your Account</a>
+                                <a href="">Returns Centre</a>
+                                <a href="">100% Purchase Protection</a>
+                                <a href="">Amazon App Download</a>
+                                <a href="">Help</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="border border-spacing-x-0 border-gray-500 min-[400px]:mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-10 "></div>  
+                <div class="flex justify-center content-center 2xl:mt-10 min-[400px]:mt-3 md:mt-6 lg:mt-10 xl:mt-12">
+                    <img class="2xl:w-44 2xl:h-28 min-[400px]:w-10 min-[400px]:h-12 min-[400px]:mt-2 md:w-28 md:h-24 lg:w-40 lg:h-32 xl:w-52 xl:h-40" src="amazon-logo-1024x683-removebg-preview.png" >
+                    <div class="flag justify-center content-center">
+                        <select class="bg-gray-800 text-white 2xl:w-44 2xl:h-11 min-[400px]:w-20 min-[400px]:h-5 border border-gray-700 2xl:p-2 min-[400px]:text-[10px] min-[400px]:ml-2 md:w-32 md:h-10 md:text-[15px] lg:w-44 lg:h-10 lg:text-[20px] xl:w-56 xl:h-16 xl:text-[25px] 2xl:text-[15px]">
+                            <option value="">English-EN</option>
+                            <option value="">हिन्दी - HI - अनुवाद</option>
+                            <option value="">தமிழ் - TA - மொழிபெயர்ப்பு</option>
+                            <option value="">తెలుగు - TE - అనువాదం</option>
+                            <option value="">ಕನ್ನಡ - KN - ಭಾಷಾಂತರ</option>
+                            <option value="">ಕನ್ನಡ - KN - ಭಾಷಾಂತರ</option>
+                            <option value="">മലയാളം - ML - വിവർത്തനം</option>
+                            <option value="">বাংলা - BN - অনুবাদ</option>
+                            <option value="">मराठी - MR - भाषांतर</option>
+                        </select>
+                    </div>
+                    <div class="2xl:ml-5 2xl:mt-9 flex justify-center content-center 2xl:w-32 2xl:h-11 border border-gray-700 min-[400px]:w-16 min-[400px]:h-5 min-[400px]:mt-5 min-[400px]:ml-2 md:w-24 md:h-10 md:mt-8 lg:w-36 lg:h-10 lg:mt-12 xl:w-52 xl:h-16 xl:mt-[52px]">
+                        <img class="2xl:w-10 2xl:h-5 2xl:ml-1 2xl:mt-3 content-center min-[400px]:w-5 min-[400px]:h-3 min-[400px]:mt-1 md:w-8 md:h-5 md:mt-3 lg:w-10 lg:h-5 xl:w-16 xl:h-8 xl:mt-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_P9TOpljbCGlA108peG3s34eIXeP2Vrs3Q&s">
+                        <h4 class="2xl:ml-3 2xl:mt-2 text-white 2xl:text-lg min-[400px]:text-[10px] min-[400px]:mt-1 md:text-[15px] md:mt-3 lg:text-[20px] lg:mt-2 lg:ml-2 xl:text-[25px] xl:mt-4 ">Indian</h4>
+                    </div>
+                </div>  
+            </div>
+            <!-------------------------------------------footer-section----------------------------------------------------------------->
+            <div class="bg-[#131A22]">
+                <div class="grid grid-cols-4 gap-4 2xl:p-10 2xl:w-[1000px] 2xl:ml-48 min-[400px]:p-2 md:p-4 lg:w-[950px] lg:ml-10 lg:mt-5 xl:w-[1200px] xl:ml-20 xl:mt-5 ">
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin md:text-[12px]  lg:text-[15px] xl:text-[18px] " >
+                            <a href="" class="hover:2xl:border-b-2 2xl:w-20">AbeBooks</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-24">Books, art</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-32">& collectibles</a>
+                        </div>
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px]  lg:text-[15px] xl:text-[18px]">
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-52">Amazon Web Services</a> 
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-36">Scalable Cloud</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-48">Computing Services</a>
+                        </div>
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px]  lg:text-[15px] xl:text-[18px]">
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-20">Audible</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-24">Download</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-28">Audio Books</a>
+                        </div>
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px]  lg:text-[15px] xl:text-[18px]">
+                            <a href=""class="hover:2xl:xl:border-b-2 hover:2xl:w-14">IMDb</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-20">Movies,TV</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-28">& Celebrities</a>
+                        </div> 
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px]  lg:text-[15px] xl:text-[18px]">
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-24">Shopbop</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-24">Designer</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-36">Fashion Brands</a>
+                        </div>
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px]  lg:text-[15px] xl:text-[18px]">
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-40"> Amazon Business</a> 
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-32">Everything For</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-32"> Your Business</a>
+                        </div>
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px]  lg:text-[15px] xl:text-[18px]">
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-24"> Prime Now</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-36">2-Hour Delivery</a>
+                            <a href="" class="hover:2xl:border-b-2 hover:2xl:w-40"> on Everyday Items</a>
+                        </div>
+                        <div class="text-white flex flex-col 2xl:text-[18px] 2xl:font-thin min-[400px]:text-[6px] min-[400px]:font-thin  md:text-[12px] lg:text-[15px] xl:text-[18px]">
+                            <a href="" class="hover:2xl:border-b-2 2xl:w-48"> Amazon Prime Music</a>
+                            <a href="" class="hover:2xl:border-b-2">100 million songs, ad-free</a>
+                            <a href="" class="hover:2xl:border-b-2 2xl:w-52">Over 15 million podcast episodes</a>
+                        </div> 
+                </div>
+                <!---------------------------------copy-right-------------------------------------------------------->
+                <div class="text-white 2xl:p-10 min-[400px]:p-3 md:p-6 lg:p-8 xl:p-10">
+                    <div class="text-center 2xl:text-[12px] min-[400px]:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[15px]">
+                        <a href="" class="hover:2xl:border-b-2 2xl:w-36">Conditions of Use & Sale</a>
+                        <a href="" class="2xl:ml-2 hover:2xl:border-b-2 2xl:w-36">Privacy Notice</a>
+                        <a href="" class="2xl:ml-2 hover:2xl:border-b-2 2xl:w-36 ">Interest-Based Ads</a>
+                     </div>
+                     <h4 class="text-center 2xl:mt-2 2xl:text-[12px] min-[400px]:text-[8px] md:text-[10px] lg:text-[13px]  xl:text-[15px]">© 1996-2024, Amazon.com, Inc. or its affiliates</h4>
+                </div>       
+            </div>      
+        </section>
+        
+    
+    </body>
+</html>
